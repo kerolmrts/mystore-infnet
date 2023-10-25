@@ -44,11 +44,52 @@ const searchProductByName= (productName)=>{
     })
 }
 
+const updateProduct= (productId, updatedData)=>{
+    return getProducts() //obtém todos os produtos
+    .then((productsData)=> {
+        //consegui os produtos, agora preciso achar o produto do id escolhido para ser alterado
+        //em seguida, atualizar o campo (titulo)
+        const productIndex= productsData.findIndex(
+            product=> product.id === parseInt(productId) //Dá um nome para cada produto e faz a comparação 
+        )
+        if(productIndex != -1){
+            //existe um produto com aquele ID
+            const existingProduct= productsData[productIndex] //productIndex está dentro do productsData
+            if(updatedData.title != undefined){ //ter certeza de quem coisas a serem atualizadas
+                existingProduct.title = updatedData.title;
+            }
+            if(updatedData.price != undefined){
+                existingProduct.price= updatedData.price;
+            }
+            productsData[productIndex]= existingProduct; 
+
+            return filesystem.writeFile(productFilePath, JSON.stringify(productsData, null, 2),'utf-8')
+            .then(()=>{
+            return existingProduct;
+            })
+            .error ((error)=>{
+                throw new Error("Unable to update product")
+            })
+        }else {
+            throw new Error('Unable to find product')
+        }
+      
+
+    })
+
+    .catch((error)=>{
+        throw new Error("Unable to get products")
+    })
+
+}
+
+
 
 module.exports={
     getProducts,
     getProductById,
-    searchProductByName
+    searchProductByName,
+    updateProduct
 };
 
 

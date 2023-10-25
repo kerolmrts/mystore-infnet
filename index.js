@@ -9,8 +9,6 @@ const logMiddleware = require('./middlewares/logMiddleware');
 const rateLimit = require('./middlewares/rateLimitMiddleware');
 
 
-
-
 app.use(express.json());
 //para que o projeto possa receber/ler arquivos json
 
