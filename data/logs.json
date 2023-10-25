@@ -47,5 +47,33 @@
     "url": "/products/1",
     "params": {},
     "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-25T00:45:57.172Z",
+    "method": "PUT",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-25T00:46:02.953Z",
+    "method": "GET",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-25T00:47:36.616Z",
+    "method": "PUT",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-25T00:47:50.195Z",
+    "method": "GET",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
   }
 ]
