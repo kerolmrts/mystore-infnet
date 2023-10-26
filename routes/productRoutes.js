@@ -56,6 +56,20 @@ router.put("/:id", (req, res) => {
   //criar um nova requisição PUT/JSON/BODY-RAW- coloca o localhost/products + produto que quer atualizar (1 - mochila)
   //body - digita o title
 });
+
+
+router.delete("/:id", (req,res)=>{
+  const IdRecebido= req.params.id;
+  productController.deleteProducts(IdRecebido)
+  .then((deletedProducts)=>{
+         res.status(200).json(deletedProducts)
+    })
+
+  .catch((error)=>{
+    res.status(404).send('Product not found')
+  })
+  })
+
 module.exports = router;
 
 //receber uma solicitação e encaminhar

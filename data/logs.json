@@ -75,5 +75,75 @@
     "url": "/products/1",
     "params": {},
     "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-25T23:34:36.875Z",
+    "method": "GET",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-25T23:35:05.484Z",
+    "method": "DELETE",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T00:06:27.625Z",
+    "method": "GET",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T00:06:31.384Z",
+    "method": "DELETE",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T00:07:33.636Z",
+    "method": "GET",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T00:07:40.654Z",
+    "method": "DELETE",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T00:10:04.719Z",
+    "method": "GET",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T00:10:09.287Z",
+    "method": "DELETE",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T00:12:22.700Z",
+    "method": "GET",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T00:12:25.743Z",
+    "method": "DELETE",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
   }
 ]

@@ -104,11 +104,49 @@ const updateProduct = (productId, updatedData) => {
     });
 };
 
+
+const deleteProducts= (productId) =>{
+  return getProducts((productsData)=>{
+    const productIndex= productsData.findIndex(
+      //procura o index dentro do data
+      product => product.id === parseInt(productId)
+      )
+
+      if(productIndex != -1){
+        const updatedProductsData= productsData.filter(
+          product => product.id !== parseInt(productId)
+        )
+
+        const deletedProduct= productsData [productIndex];
+        return filesystem.writeFile(productFilePath, JSON.stringify(updatedProductsData, null, 2), 'utf-8')
+        .then(()=>{
+          return deletedProduct
+
+        })
+        .catch((error)=>{
+          throw new Error ("Unable to delete product")
+        })
+
+      }else{
+        throw new Error ("Product not found")
+      }
+      
+  })
+  .then(
+
+  )
+  .catch((error)=>{
+    throw new Error('Unable to get products')
+
+  })
+}
+
 module.exports = {
   getProducts,
   getProductById,
   searchProductByName,
   updateProduct,
+  deleteProducts
 };
 
 // processamento, procura de produtos
