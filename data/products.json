@@ -238,5 +238,41 @@
       "rate": 3.6,
       "count": 145
     }
+  },
+  {
+    "id": 1,
+    "title": "TESTE PRODUTO",
+    "price": 99999,
+    "description": "TESTE",
+    "category": "TESTE",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+  },
+  {
+    "id": 1,
+    "title": "TESTE PRODUTO 21",
+    "price": 99999,
+    "description": "TESTE",
+    "category": "TESTE",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
+  },
+  {
+    "id": 21,
+    "title": "TESTE PRODUTO 21",
+    "price": 99999,
+    "description": "TESTE",
+    "category": "TESTE",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    }
   }
 ]

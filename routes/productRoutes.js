@@ -57,18 +57,30 @@ router.put("/:id", (req, res) => {
   //body - digita o title
 });
 
-
-router.delete("/:id", (req,res)=>{
-  const IdRecebido= req.params.id;
-  productController.deleteProducts(IdRecebido)
-  .then((deletedProducts)=>{
-         res.status(200).json(deletedProducts)
+router.delete("/:id", (req, res) => {
+  const IdRecebido = req.params.id;
+  productController
+    .deleteProducts(IdRecebido)
+    .then((deletedProducts) => {
+      res.status(200).json(deletedProducts);
     })
 
-  .catch((error)=>{
-    res.status(404).send('Product not found')
-  })
-  })
+    .catch((error) => {
+      res.status(404).send("Product not found");
+    });
+});
+
+router.post("/", (req, res) => {
+  const newProductData = req.body; //quando der não para mandar pela url, vai pelo corpo da requisição
+  productController
+    .addProducts(newProductData)
+    .then((product) => {
+      res.status(201).json(product);
+    })
+    .catch((error) => {
+      res.status(500).send("Error adding product");
+    });
+});
 
 module.exports = router;
 

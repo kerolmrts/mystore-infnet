@@ -141,12 +141,44 @@ const deleteProducts= (productId) =>{
   })
 }
 
+
+const addProducts= (newProductData)=>{
+  return getProducts()
+  .then((productsData)=>{
+    //Lógica para encontrar o maior id na lista de produtos
+    let maxProductId= -1;
+    productsData.forEach(product=>{
+      if(product.id > maxProductId){
+
+        maxProductId= product.id;
+      }
+    })
+    const newProductId= ++maxProductId;
+    const newProductWithId= Object.assign({id: newProductId}, newProductData) //insere propriedade dentro do objeto
+    productsData.push(newProductWithId)
+
+    return filesystem.writeFile(productFilePath, JSON.stringify(productsData, null, 2), "utf-8")
+    .then(()=>{
+      return newProductWithId;
+    })
+    .catch((error)=>{
+      throw new Error ("Unable to add new product")
+    })
+
+  })
+  .catch((error)=>{
+   console.error("Unable to read product file" + error) //console.error lança o erro no back e não na rota
+  })
+}
+
+
 module.exports = {
   getProducts,
   getProductById,
   searchProductByName,
   updateProduct,
-  deleteProducts
+  deleteProducts,
+  addProducts
 };
 
 // processamento, procura de produtos

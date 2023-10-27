@@ -145,5 +145,54 @@
     "url": "/products/1",
     "params": {},
     "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T23:23:11.643Z",
+    "method": "POST",
+    "url": "/products/",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T23:49:04.531Z",
+    "method": "POST",
+    "url": "/products/",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T23:51:14.124Z",
+    "method": "POST",
+    "url": "/products/",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T23:51:41.534Z",
+    "method": "POST",
+    "url": "/products/",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T23:52:50.836Z",
+    "method": "DELETE",
+    "url": "/products/20",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T23:53:05.286Z",
+    "method": "DELETE",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2023-10-26T23:53:17.239Z",
+    "method": "DELETE",
+    "url": "/products/1",
+    "params": {},
+    "ip": "::1"
   }
 ]
